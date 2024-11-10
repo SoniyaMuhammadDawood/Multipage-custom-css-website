@@ -2,26 +2,428 @@
 @tailwind components;
 @tailwind utilities;
 
-:root {
-  --background: #ffffff;
-  --foreground: #171717;
-}
 
-@media (prefers-color-scheme: dark) {
-  :root {
-    --background: #0a0a0a;
-    --foreground: #ededed;
+.haeder{
+  /* background: #170101da; */
+  background: rgba(0, 0, 0, 0.773);
+  display: flex;
+  height: 3.5rem;
+
   }
+
+  .logo {
+    position: absolute;
+    top: 20px;
+    left: 20px;
+    z-index: 15; /* Ensure the logo is on top of the images and buttons */
+  }
+  
+  .logo-image {
+    width: 110px; /* Adjust the size of the logo as needed */
+    height: auto;
+  }
+  
+  .ul-1{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    gap: 6rem;
+    font-weight: 600;
+    font-size: large;
+    
+  }
+
+  .li-styling:hover{
+    text-decoration: underline;
+    color: goldenrod;
+  }
+  
+
+
+
+/* Make the slider take full width and height of the screen */
+.slider-container {
+  width: 98.7vw; /* Full viewport width */
+  height: 92vh; /* Full viewport height */
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  overflow: hidden; /* Hide overflow to ensure no unwanted scrollbars */
+  position: relative;
 }
 
+/* Slider Styling */
+.slider {
+  position: relative;
+  width: 100%;
+  height: 100%;
+  overflow: hidden;
+}
+
+.slider-image {
+
+  width: 100%;
+  height: 100%;
+  object-fit: cover; /* Makes the image cover the entire slider area */
+  transition: transform 0.5s ease-in-out;
+}
+
+/* Button Styling */
+.arrow {
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  background-color: rgba(0, 0, 0, 0.5);
+  color: white;
+  border: none;
+  padding: 15px;
+  cursor: pointer;
+  font-size: 24px;
+  border-radius: 50%;
+  z-index: 10;
+  user-select: none;
+}
+
+.arrow:hover {
+  background-color: rgba(0, 0, 0, 0.8);
+}
+
+/* Positioning the Arrows */
+.arrow.prev {
+  left: 20px;
+}
+
+.arrow.next {
+  right: 20px;
+}
+
+
+
+/* Contact Page Styles */
+
+.contact-container {
+  max-width: 600px;
+  margin: 40px auto;
+  padding: 20px;
+  background-color: rgba(0, 0, 0, 0.818);
+  border-radius: 10px;
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
+  text-align: center;
+}
+
+/* Add a new class for the page background */
+.contact-page {
+
+  background-image: url("../../public/picture/car\ now\ new.jpg");
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background-repeat: no-repeat;
+  background-size: cover; 
+}
+
+.contact-title {
+  font-size: 32px;
+  font-weight: bold;
+  margin-bottom: 10px;
+  color: #ffffff;
+}
+
+.contact-description {
+  font-size: 16px;
+  margin-bottom: 30px;
+  color: #ffffff;
+}
+
+.contact-form {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+}
+
+.form-group {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+}
+
+label {
+  font-size: 14px;
+  margin-bottom: 5px;
+  color: #ffffff;
+}
+
+.form-input {
+  width: 100%;
+  padding: 10px;
+  border: 1px solid #f6e5e5;
+  border-radius: 5px;
+  font-size: 14px;
+  outline: none;
+  transition: border-color 0.3s;
+  
+}
+
+.form-input:focus {
+  border-color: #ff4500; /* Accent color */
+}
+
+textarea.form-input {
+  resize: vertical;
+}
+
+.submit-button {
+  padding: 12px 20px;
+  background-color: #ff4500;
+  color: #fff;
+  border: none;
+  border-radius: 5px;
+  font-size: 16px;
+  cursor: pointer;
+  transition: background-color 0.3s;
+}
+
+.submit-button:hover {
+  background-color: #e03e00; /* Darker accent color on hover */
+}
+
+
+
+
+
+/* About Header */
+
+
+.aboutImg{
+  background-image: url("../../public/picture/about.png");
+  background-repeat: no-repeat;
+  background-size: cover;
+  height: 120vh; 
+  padding-top: 2rem;
+  
+}
+
+.aboutSection {
+  text-align: center;
+  height: 5rem;
+  /* margin-bottom: 1rem; */
+}
+
+.aboutUs{
+  font-size: xxx-large;
+  font-weight: bolder;
+  color: #000000;
+ 
+}
+
+.aboutSubText {
+  font-size: 1.3rem;
+  font-weight: 300;
+  color: white;
+}
+.aboutContent{
+  margin-bottom: 2rem;
+}
+
+/* Content Container */
+.contentContainer {
+  max-width: 700px;
+  /* margin: 3rem auto; */
+  margin: 3rem auto;
+  padding: 0 2rem;
+}
+
+
+.missionSection,
+.teamSection {
+  margin-bottom: 0.5rem;
+  background-color: rgba(0, 0, 0, 0.818);
+  padding: 1.4rem;
+  border-radius: 10px;
+  box-shadow: 0 8px 20px #ff7a59;
+}
+
+.sectionHeading {
+  font-size: 2rem;
+  color: #fff;
+  margin-bottom: 4px;
+  border-bottom: 3px solid #ff7a59;
+  display: inline-block;
+  padding-bottom: 0.3rem;
+}
+
+.text {
+  font-size: 1.1rem;
+  line-height: 1.8;
+  color: #fff;
+}
+
+/* General Styling */
 body {
-  color: var(--foreground);
-  background: var(--background);
-  font-family: Arial, Helvetica, sans-serif;
+  background-color: #f4f4f4;
+  font-family: 'Arial, sans-serif';
 }
 
-@layer utilities {
-  .text-balance {
-    text-wrap: balance;
-  }
+a {
+  color: #ff7a59;
+  text-decoration: none;
+  transition: color 0.3s ease;
+}
+
+a:hover {
+  color: #ff5733;
+}
+
+
+
+
+
+
+
+
+
+/* SKILLS PAGE */
+
+.skills-page {
+  background-color: #f4f4f9;
+  padding: 40px;
+  text-align: center;
+  font-family: Arial, sans-serif;
+}
+
+.skills-title {
+  font-size: 2.5rem;
+  color: #333;
+  margin-bottom: 20px;
+}
+
+.skills-description {
+  font-size: 1.2rem;
+  color: #555;
+  margin-bottom: 40px;
+  max-width: 600px;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.skills-container {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 20px;
+}
+
+.skill-card {
+  background-color: #fff;
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
+  border-radius: 10px;
+  width: 250px;
+  padding: 20px;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.skill-card:hover {
+  transform: translateY(-10px);
+  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.15);
+}
+
+.skill-name {
+  font-size: 1.5rem;
+  color: #ff5733;
+  margin-bottom: 10px;
+  font-weight: 800;
+  font-family: Georgia, 'Times New Roman', Times, serif;
+}
+
+.skill-detail {
+  font-size: 1rem;
+  color: #666;
+  line-height: 1.6;
+}
+
+
+.car1{
+  background-image: url('../../public/picture/carS1.png');
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+.car2{
+  background-image: url('../../public/picture/carS2.png');
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+.car3{
+  background-image: url('../../public/picture/carS3.png');
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+.car4{
+  background-image: url('../../public/picture/carS4.png');
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+
+
+
+
+
+/* Footer Styles */
+.footer-container {
+  background-color: #1f1f1f;
+  color: #fff;
+  padding: 40px 20px;
+  text-align: center;
+}
+
+
+.footer-content {
+  display: flex;
+  justify-content: space-around;
+  flex-wrap: wrap;
+  max-width: 1200px;
+  margin: 0 auto;
+  gap: 20px;
+}
+
+.footer-section {
+  flex: 1;
+  min-width: 250px;
+  margin: 10px;
+}
+
+.footer-title {
+  font-size: 18px;
+  font-weight: bold;
+  margin-bottom: 10px;
+  text-transform: uppercase;
+}
+
+.footer-links {
+  list-style: none;
+  padding: 0;
+}
+
+.footer-links li {
+  margin: 5px 0;
+}
+
+.footer-links a {
+  color: #ffffff;
+  text-decoration: none;
+  transition: color 0.3s;
+}
+
+.footer-links a:hover {
+  color: #ff4500; /* Accent color for hover */
+}
+
+.footer-bottom {
+  border-top: 1px solid #333;
+  margin-top: 20px;
+  padding-top: 10px;
+  font-size: x-large;
+  word-spacing: 4px;
+  letter-spacing: 3px;
+  font-weight: bold;
 }
